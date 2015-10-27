@@ -1,0 +1,72 @@
+<style type="text/css">
+
+
+@media all and (max-width: 1080px) {
+  body {
+    /* First, we make the body 1-column and 5 rows spaced by 4 margin rows */
+    grid-columns: 1fr;
+    grid-rows: auto (1% auto)[4];
+    /* This is the same as:
+     * grid-rows: auto 1% auto 1% auto 1% auto 1% auto;
+     */
+  }
+  
+    .main, .footer{
+    grid-column: 1;
+  }
+  
+  .main  { grid-row: 1; }
+  .footer  { grid-row: 2; }
+  .ads     { grid-row: 3; }
+  
+[class*='row-'] {
+  float: left;
+}
+
+.row-1 {
+  width: 100.00%;
+  background: purple;
+  height: 60px; 
+}
+
+.row-2 {
+  width: 100.00%;
+  height: 15px; 
+}
+.row-3 {
+  width: 100.00%;
+  background: deepskyblue;
+  height: 400px; 
+}
+
+[class*='col-'] {
+  float: left;
+}
+			   
+.col-3-1 {
+  width: 25.00%;
+}
+
+
+.col-3-2 {
+  width: 25.00%;
+}
+.col-3-3 {
+  width: 50.00%;
+  float:left;
+  font: arial;
+}
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+  
+
+}
+
+}
+</style>
+

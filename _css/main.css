@@ -1,12 +1,11 @@
-
-<!DOCTYPE html>
-<style type="text/css">
-
-
 @media all and (max-width: 1080px) {
   body {
-grid-columns: 1fr;
-    grid-rows: auto (1% auto)[4]
+    /* First, we make the body 1-column and 5 rows spaced by 4 margin rows */
+    grid-columns: 1fr;
+    grid-rows: auto (1% auto)[4];
+    /* This is the same as:
+     * grid-rows: auto 1% auto 1% auto 1% auto 1% auto;
+     */
   }
   
     .main, .footer{
@@ -66,24 +65,3 @@ grid-columns: 1fr;
 }
 
 }
-</style>
-
-
-<div class="main">
-<div class="row-1">
-  </div>
-  <div class="row-2">
-  </div>
-  <div class="row-3">
-  </div>
-  </div>
-
-<div class="footer">
-  <div class="col-3-1">
-  <img src="cob logo.png" width="200" height="70" alt=""/> </div>
-
-<div class="col-3-2"> <img src="IPL-logo.png" width="208" height="" alt=""/> </div>
-  <div class="col-3-3">
-     SF State and the Institude of Product Leadership have partnered to bring a series of events and programs focused on building technology product leaders in startups and large companies.
-  </div>
-</div>

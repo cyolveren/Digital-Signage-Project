@@ -1,4 +1,4 @@
-@media all and (max-width: 1080px) {
+@media all and (max-width: 1920px) {
   body {
     /* First, we make the body 1-column and 5 rows spaced by 4 margin rows */
     grid-columns: 1fr;
@@ -65,7 +65,7 @@ border-radius: 2px;
 		   
 .col-3-1 {
   width: 100.00%;
-  background-color:purple;
+  background-color: #45003E;
    height: 70px; 
 }
 

@@ -6,8 +6,22 @@
     /* This is the same as:
      * grid-rows: auto 1% auto 1% auto 1% auto 1% auto;
      */
+
+
   }
   
+/* resets */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
     .header{
     grid-column: 1;
   }
@@ -27,29 +41,43 @@
 
 .row-2 {
   width: 100.00%;
-  height: 70px; 
+  height: 10px; 
 }
 
 [class*='main-'] {
   float:left;
+  
 }
 
 .main-1-1 {
   width: 33.33%;
-  background: deepskyblue;
+  background: linear-gradient(MediumPurple, Plum);
   height: 400px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  padding-top: 43px;
+
 }
 .main-1-2 {
   width: 66.66%;
-  background: skyblue;
-  height: 400px;
+  background: Azure;
+  height: 35px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  vertical-align: middle;
+}
+
+
+.main-1-3 {
+  width: 66.66%;
+  background: linear-gradient(deepskyblue, cyan);
+  height: 365px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
 
 [class*='col-'] {
   float: left;
 }
-			   
+		   
 .col-3-1 {
   width: 25.00%;
 }
@@ -70,8 +98,7 @@
 }
 
 
+}
   
 
-}
 
-}

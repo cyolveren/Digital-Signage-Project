@@ -56,6 +56,7 @@ border-radius: 2px;
   height: 905px;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   border-radius: 2px;
+  padding: 50px 50px 0px 0px;
 }
 
 
@@ -65,8 +66,9 @@ border-radius: 2px;
 		   
 .col-3-1 {
   width: 100%;
-  background-color: #45003E;
+  background-color: #3B0E3C;
    height: 175px; 
+   padding-left:50px;
 }
 
 

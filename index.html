@@ -4,6 +4,8 @@
 <head>
     <title>CoB Digital Display Project</title>
     <link rel="stylesheet" type="text/css" href="_css/main.css">
+
+    <script src="js/moment.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -13,8 +15,7 @@
 
            <div class="content">
         <div class="main-1-1">
-        <center><h3>Business Ethics Week 2015</h3>
-             <img src="_img/Business-Ethics-Week-2011.jpg" width="350" height="140" alt="" /> </center>
+            <img src="http://placehold.it/1280x905"> 
         </div>
 
                   <div class="main-1-3">  
@@ -34,7 +35,39 @@ Wednesday, November 4, 2015 <br> 12:00pm to 1:00pm</li></p>
     <div class="footer">
          <div class="col-3-1">
              <img src="_img/cob-wordmark-white.svg" width="200" height="175" alt="" />
+
+
         </div>
+        <div class="col-3-2">
+
+              <div id="Time">
+</div>
+  <script type="text/javascript">
+(function()
+{
+var NowMoment = moment();
+var eDisplayMoment = document.getElementById('Time');
+eDisplayMoment.innerHTML = NowMoment.format('HH:mm A');
+  
+
+})();
+var datetime = null,
+        date = null;
+
+var update = function () {
+    date = moment(new Date())
+    datetime.html(format('HH:mm A'));
+};
+
+$(document).ready(function(){
+    datetime = $('#datetime')
+    update();
+    setInterval(update, 1000);
+});
+
+
+</script>
+</div>
         </div>
 
 </body>

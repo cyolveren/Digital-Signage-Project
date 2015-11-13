@@ -64,15 +64,17 @@ min-width: 1920px;
 padding-left:50px;
 }
 .col-3-2 {
+  display: flex;
+  justify-content: flex-end;
   min-width: 960px;
   background-color: #3B0E3C;
   height: 175px;
   padding-right:50px;
+
 }
 
 #Time {
-  float:right;
- 
+ align-self: center;
   color: white;
 font-family: "Times New Roman", Times, serif;
   font-size: 50px;

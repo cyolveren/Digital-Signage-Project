@@ -1,0 +1,10 @@
+{ "news" : [
+    
+    {"title": "MBA Open House",
+     "description": "Learn about our MBA, Master of Science in Accountancy, and Executive MBA programs at San Francisco State University"
+    },
+    {"title": "MBA Workshop",
+     "description": "Learn about our Executive MBA programs at San Francisco State University"
+    }
+    
+    ]}

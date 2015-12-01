@@ -11,7 +11,7 @@
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"> </script>
-
+<meta http-equiv="refresh" content="30">
 
 
 <script id="newsfeed" type="text/template">
@@ -24,7 +24,7 @@
 </script>
 
 
-        <script type="text/javascript">
+       <script type="text/javascript">
 $(function(){ 
     
     $.getJSON('data.json', function(data) {
@@ -39,9 +39,28 @@ $(function(){
 
 
 
-    </script>
+    </script> 
+ <!--
 
 
+<script type="text/javascript">
+$(document).ready(function() {
+  $.ajax({
+    type: "GET",
+    url: "data.json",
+    dataType: "json",
+    success: processBeer,
+    error: function(){ alert("error"); 
+        
+    }
+  });
+  function processBeer(data){
+    $(".box").append("Hello");
+  }
+});
+ </script>
+-->
+ 
 </head>
 
 <body>
@@ -57,11 +76,42 @@ $(function(){
                   <div class="main-1-3">
                     
 
-
 <div id="rss-feeds">
+    
+    <!--  Different methods
+    <script> 
+    $.getJSON("http://mtgjson.com/json/AllSets.json",    function (data) {
+         $('#rss-feeds').html(data);
+   $.each(data, function(key, value){
+    console.log(key, value);
+  });
+});
+
+    $.getJSON('http://anyorigin.com/dev/get?url=http%3A//api.geonames.org/citiesJSON%3Fnorth%3D44.1%26south%3D-9.9%26east%3D-22.4%26west%3D55.2%26lang%3Dde%26username%3Ddemo&callback=?', function(data){
+$('#output').html(data.contents);
+});
+    
+$.ajax({
+        url: 'http://anyorigin.com/dev/get?url=http%3A//api.geonames.org/citiesJSON%3Fnorth%3D44.1%26south%3D-9.9%26east%3D-22.4%26west%3D55.2%26lang%3Dde%26username%3Ddemo&callback=?',
+        type: 'GET',
+        dataType: "json",
+        success: displayAll
+    });
+
+function displayAll(data){
+    alert(data);
+}    
+</script> 
+
+ -->
+</div> 
+<!-- 
+<div class="box" id='d'>
+
+
 </div>
 
-
+ -->
 
 
 

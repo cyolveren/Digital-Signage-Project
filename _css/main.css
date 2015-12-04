@@ -80,9 +80,13 @@ font-family: "Times New Roman", Times, serif;
   font-size: 50px;
 }
 
-
-
-
+.right.carousel-control, .left.carousel-control {
+    display: none;
+}
+.carousel-indicators
+{
+    display: none;
+}
 }
   
 

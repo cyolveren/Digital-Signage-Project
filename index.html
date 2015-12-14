@@ -33,7 +33,7 @@ $(document).ready(function (){
         /* set no cache */
         $.ajaxSetup({ cache: false });
  
- 
+setInterval(function() {
   $.getJSON('data.json',  function(data){ 
             var html = [];
  
@@ -47,10 +47,12 @@ $(document).ready(function (){
         }).error(function(jqXHR, textStatus, errorThrown){ /* assign handler */
             /* alert(jqXHR.responseText) */
             alert("error occurred!");
-        });
-    
-});
+            
+       });
+       
+}, 1000);
 
+});
 
 
 </script>

@@ -24,7 +24,6 @@
  
 
 
-
 <script type="text/javascript">
 
 
@@ -39,11 +38,11 @@ setInterval(function() {
  
             /* loop through array */
             $.each(data, function(index, d){            
-                html.push(d.node_title, "<br>", d.field_event_date, "<br>");
+                html.push(d.node_title, "<br>", d.field_event_date, "<br>","<br>");
             });
  
  
-            $("#div381").html(html.join(''));
+            $("#feed").html(html.join(''));
         }).error(function(jqXHR, textStatus, errorThrown){ /* assign handler */
             /* alert(jqXHR.responseText) */
             alert("error occurred!");
@@ -57,7 +56,7 @@ setInterval(function() {
 
 </script>
 
-
+<meta http-equiv="refresh" content="1800">
  
 </head>
 
@@ -107,18 +106,11 @@ setInterval(function() {
                   <div class="main-1-3">
                     
 
-<a name="#ajax-getjson-example"></a>
-<div id="example-section38">    
-    <div id="div381"></div>
-    
-</div>
-
-
-
-
-
-                 
-    </div>
+   
+    <div id="feed"></div>
+ 
+ </div>
+ 
   </div>
 
     <div class="footer">

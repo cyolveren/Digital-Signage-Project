@@ -73,6 +73,7 @@ padding-left:50px;
 
 }
 
+
 #Time {
  align-self: center;
   color: white;
@@ -80,6 +81,8 @@ font-family: "Times New Roman", Times, serif;
   font-size: 50px;
 }
 
+
+/* removes left and right buttons on carousel     */
 .right.carousel-control, .left.carousel-control {
     display: none;
 }
@@ -88,13 +91,13 @@ font-family: "Times New Roman", Times, serif;
     display: none;
 }
 
+/* json feed style. limits # of lines in <div>     */
 #feed {
-font-family: "Times New Roman", Times, serif;
+font-family: Tahoma, Geneva, sans-serif;
   font-size: 19px;
   font-weight: bold;
-  height: 50em; 
-  line-height: 1.7em; 
   overflow: hidden;
+  color:#3B0E3C;
 
 }
 

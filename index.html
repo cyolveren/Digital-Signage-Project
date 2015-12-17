@@ -26,44 +26,51 @@
 
 <script type="text/javascript">
 
-
+  //get data from json file and refresh "feed" <div> every second
+  
 $(document).ready(function (){
           
         /* set no cache */
         $.ajaxSetup({ cache: false });
  
-setInterval(function() {
+
+setInterval((function interval() { 
   $.getJSON('data.json',  function(data){ 
             var html = [];
  
+
             /* loop through array */
-            $.each(data, function(index, d){            
-                html.push(d.node_title, "<br>", d.field_event_date, "<br>","<br>");
+            $.each(data.slice(0,9), /* limits number of data displayed */ function(index, d){  
+                
+                 
+                html.push(d.node_title, "<br>", d.field_event_date, "<br>","<br>");   // display title and date
+                
+                
             });
- 
- 
+           
+            
             $("#feed").html(html.join(''));
         }).error(function(jqXHR, textStatus, errorThrown){ /* assign handler */
             /* alert(jqXHR.responseText) */
             alert("error occurred!");
-            
+        
        });
-       
-}, 1000);
+           return interval;
+})(), 900000); //setinterval , refresh the data every 15 mins
 
 });
 
 
 </script>
 
-<meta http-equiv="refresh" content="1800">
+<meta http-equiv="refresh" content="1800">   <!-- refresh the page every 30 mins  -->
  
 </head>
 
 <body>
 
 
-
+  <!-- CAROUSEL  -->
            <div class="content">
         <div class="main-1-1">
            <div class="bs-example">
@@ -115,15 +122,21 @@ setInterval(function() {
 
     <div class="footer">
          <div class="col-3-1">
+             <!-- logo -->
              <img src="_img/cob-wordmark-white.svg" width="200" height="175" alt="" />
 
 
         </div>
         <div class="col-3-2">
 
+
               <div id="Time">
 </div>
+
+
+<!-- function for time on the right corner -->
   <script type="text/javascript">
+  
 (function()
 {
 var NowMoment = moment();
@@ -137,6 +150,8 @@ $('#Time').fitText(1.3);
 
 
 </script>
+
+<!-- updates time every second -->
  <script type="text/javascript">
 
 function date_time() {
